@@ -6,33 +6,20 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import { LinkedInPopUp } from 'react-linkedin-login-oauth2';
 import login from './components/login';
+import mainpage from './components/mainpage';
 
 
 export default function App() {
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
-
     <div className="Site">
       <div className="Site-Content">
         <Router>
             <Switch>
                 <Route exact path="/" component={login} />
+                <Route exact path="/linkedin" component={LinkedInPopUp} />
+                <Route exact path="/mainpage" component={mainpage} />
             </Switch>
         </Router>
     </div>
